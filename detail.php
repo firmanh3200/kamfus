@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     /* Styling for popup */
@@ -17,28 +17,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 100px;
+      padding-top: 150px;
     }
     
     .popup-content {
-      max-width: 500px;
+      max-width: 90%;
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
     }
     
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      color: #999;
-      cursor: pointer;
-    }
-    
     .popup-body {
-      margin-top: 100px;
-      margin-bottom: 20px;
+      margin-top: 325px;
+      margin-bottom: 10px;
+      max-width: 90%;
     }
     
     .popup-body p {
@@ -55,6 +47,16 @@
     .popup-body p a:hover {
       text-decoration: underline;
     }
+    
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: #999;
+      cursor: pointer;
+    }
+    
     
     .form-group {
       margin-bottom: 20px;
@@ -77,27 +79,6 @@
       margin-bottom: 20px;
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // Fungsi untuk menutup popup dan kembali ke halaman sebelumnya
-    function closePopup() {
-      window.history.back();
-    }
-
-    // Fungsi untuk menghitung Angka Kredit
-    function calculateAK() {
-      var volume = document.getElementById('volume').value;
-      var ak = parseFloat(document.getElementById('ak-value').textContent);
-
-      if (volume !== '') {
-        var result = ak * volume;
-        document.getElementById('result').innerHTML = "Angka Kredit Anda: " + result.toFixed(2);
-      } else {
-        document.getElementById('result').innerText = '';
-      }
-    }
-  </script>
 </head>
 <body>
   <div class="popup">
@@ -130,7 +111,7 @@
                 $formatted_number = number_format($Stat, 0); // Display without decimal places if 1 or more
               }
               echo "<h5><strong>Kegiatan/ Proyek: " . $row['kegiatan'] . "</strong></h5>";
-              echo "<p><strong>Uraian Pekerjaan:<br></strong> " . $row['uraian'] . "</p>";
+              echo "<p><strong>Pekerjaan Anda:<br></strong> " . $row['uraian'] . "</p>";
               echo "<p><strong>Satuan hasil:</strong> " . $row['satuan'] . "</p>";
               echo "<p><strong>Jabatan: Statistisi " . $row['pelaksana'] . "</strong></p>";
               echo "<p><strong>Angka Kredit: <span id='ak-value'>" . $formatted_number . "</span></strong></p>";
@@ -162,5 +143,26 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Fungsi untuk menutup popup dan kembali ke halaman sebelumnya
+    function closePopup() {
+      window.history.back();
+    }
+
+    // Fungsi untuk menghitung Angka Kredit
+    function calculateAK() {
+      var volume = document.getElementById('volume').value;
+      var ak = parseFloat(document.getElementById('ak-value').textContent);
+
+      if (volume !== '') {
+        var result = ak * volume;
+        document.getElementById('result').innerHTML = "Angka Kredit Anda: " + result.toFixed(2);
+      } else {
+        document.getElementById('result').innerText = '';
+      }
+    }
+  </script>
 </body>
 </html>

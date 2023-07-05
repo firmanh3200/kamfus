@@ -23,10 +23,8 @@ include 'db_connect.php';
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="">
-    <link rel="icon" type="image/png" href="">
     <title>
-        KamFuS
+        KamFuS - Kamus Fungsional Statistisi
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
@@ -41,32 +39,33 @@ include 'db_connect.php';
     }
 
     .search-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 9vh;
-        border-color: orange;
-        border-size: 5px;
-        width: 100%;        
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
-    
+
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: #f1f3f4;
+      border-radius: 24px;
+      padding: 6px;
+    }
+
     .search-box {
-        text-align: center;
-        font-size: 14px;
-        max-width: 200%;
+      flex-grow: 1;
+      border: none;
+      background-color: transparent;
+      padding: 8px;
+      font-size: 16px;
+      outline: none;
     }
 
     .search-btn {
-        position: absolute;
-        margin-left: 10px;
-        padding: 8px 12px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        vertical-align: middle;
-        line-height: 1.35;
+      border: none;
+      background-color: transparent;
+      padding: 8px;
+      cursor: pointer;
     }
     </style>
 </head>
@@ -165,8 +164,10 @@ include 'db_connect.php';
                     <h5 class="h5-seo">Kamus Fungsional Statistisi</h5>
                     <div class="search-container">
                         <form action="cari.php" method="GET">
-                            <input type="text" name="query" class="search-box" placeholder="nama survei/ sensus...">
-                            <input type="submit" value="Cari" class="search-btn btn-xl-warning">
+                            <div class="search-wrapper">                        
+                                <input type="text" name="query" class="search-box" placeholder="nama survei/ sensus...">
+                                <input type="submit" value="Cari" class="search-btn btn-round btn-success">
+                            </div>
                         </form>
                     </div>
                     <h5 class="h5-seo">Mendukung Pengelolaan Kinerja</h5>

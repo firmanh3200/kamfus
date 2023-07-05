@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <style>
+  <!-- CSS Files -->
+    <link href="./assets/css/blk-design-system.css" rel="stylesheet">
+    <style>
     /* Styling for responsive layout */
     body {
       margin: 0;
@@ -16,11 +18,12 @@
     .header {
       position: sticky;
       top: 0;
-      background-color: #fff;
+      background-color: black;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 10px;
       z-index: 1;
       align-items: center;
+      width: 100%;
     }
     
     .container {
@@ -86,15 +89,19 @@
     }
   </style>
 </head>
-<body>
+<body class="index-page">
   <div class="header">
-    <form action="cari.php" method="GET">
-        <center>
-            <input type="text" name="query" class="search-box" placeholder="Nama sensus/ survei...">
-            <input type="submit" value="Cari" class="search-btn">
-        </center>
-    </form>
+                <a href="index.php" class="btn btn-sm btn-success style="align: center">Home</a>
+                <a href="https://webapps.bps.go.id/kipapp" class="btn btn-sm btn-warning" target="_BLank">KipApp</a>
+                <a href="https://smartkit.32net.id" class="btn btn-sm btn-info" target="_BLank">SmartKit</a>
+        <form action="cari.php" method="GET">
+              <center>
+                  <input type="text" name="query" class="search-box" placeholder="Nama sensus/ survei...">
+                  <input type="submit" value="Cari" class="search-btn">
+              </center>
+        </form>
   </div>
+
   
   <div class="container">
     <?php
@@ -130,8 +137,8 @@
         echo "<thead>";
         echo "<tr>";
         echo "<th>Kode Perka</th>";
-        echo "<th>Uraian Pekerjaan</th>";
-        echo "<th>Pelaksana</th>";
+        echo "<th>Pekerjaan Anda</th>";
+        echo "<th>Statistisi</th>";
         echo "<th>Angka Kredit</th>";
         echo "</tr>";
         echo "</thead>";
@@ -150,14 +157,19 @@
         echo "</div>";
       } else {
         echo "<div class='search-results'>";
-        echo "<p>Tidak ada hasil yang ditemukan</p>";
+        echo "<h5>Tidak ada hasil yang ditemukan, silakan menghubungi Tim Penilai Kinerja.</h5>";
         echo "</div>";
       }
     }
     ?>
   </div>
-    <br><hr>
-    <footer><center>vira.w@bps.go.id<br> BPS Provinsi Jawa Barat</center></footer>
+    <hr>
+      <div class="footer">
+        <div class="container">
+            <h2 class="title">KamFuS</h2>
+            <h3 class="title">BPS Provinsi Jawa Barat</h3>
+        </div>
+      </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
@@ -165,7 +177,8 @@
     $(document).ready(function() {
       $('#searchTable').DataTable({
         "paging": true,
-        "pageLength": 5,
+        "pageLength": 3,
+        "responsive": true,
         "searching": true,
         "sorting": true,
         "info": false,

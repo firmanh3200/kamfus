@@ -50,9 +50,8 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>KamFuS</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KamFuS - Kamus Fungsional Statistisi</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
 	  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
@@ -167,7 +166,7 @@ if (isset($_POST['submit'])) {
                   <input type="submit" name="submit" value="Pilih" class="btn btn-sm btn-default">
                 <br><br>
               <input type="text" name="volume" placeholder="Isikan Volume">
-                <input type="submit" name="submit" value="Tampilkan" class="btn btn-sm btn-info">
+                <input type="submit" name="submit" value="Hitung" class="btn btn-sm btn-info">
             </div>
           </div>
         </form>
@@ -221,7 +220,7 @@ if (isset($_POST['submit'])) {
 
                           $calculationResult = "<div><h4>Kesimpulan:<br><br> Pejabat Fungsional Statistisi " . $selectedColumn2 . ", dari Pekerjaan <b>" . $selectedColumn4 . ", pada Kegiatan " . $selectedColumn3 . " sebanyak " . $volume . " " . $column3Value . " adalah " . $formatted_result . "</b></h4></div>";
                       } else {
-                          $calculationResult = "Mohon isikan volume terlebih dahulu.";
+                          $calculationResult = "Silakan isikan volume terlebih dahulu.";
                       }
 
                         echo '<table id="kalkulator">';
@@ -238,6 +237,7 @@ if (isset($_POST['submit'])) {
                         echo $tableRows;
                         echo '</tbody>';
                         echo '</table>';
+                        echo 'Sumber: PerKa BPS No. 59 Th. 2014';
                         echo '<hr>';
                         echo $calculationResult;
                       } else {
@@ -252,10 +252,10 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
       <div class="footer">
-          <div class="col-md-12">
+        <div class="container">
             <h2 class="title">KamFuS</h2>
-          	<h3 class="title">BPS Provinsi Jawa Barat</h3>
-          </div>
+            <h3 class="title">BPS Provinsi Jawa Barat</h3>
+        </div>
       </div>
 	
 </body>
