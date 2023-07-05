@@ -74,7 +74,7 @@ include 'db_connect.php';
 					<div class="col-md-12 col-lg-12 col-xl-12">
 						<section class="panel">
 							<div class="panel-body">
-							<h3><strong><center>Kegiatan Bidang/ Fungsi Statistik Distribusi</center></strong></h3>
+							<h3><strong><center>Kegiatan Umum Statistisi</center></strong></h3>
 								<hr>
 								<table class="table table-bordered table-striped mb-none" id="sosial" data-swf-path="https://cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf">
 									<thead>
@@ -89,7 +89,7 @@ include 'db_connect.php';
                     				</thead>
 									<tbody>
                     					<?php
-										$qry = $conn->query("SELECT * FROM kamus WHERE kode_pjk='4' 
+										$qry = $conn->query("SELECT * FROM kamus WHERE kode_pjk='7' 
 										order by pelaksana asc");
                     					while($row= $qry->fetch_assoc()):
                     						$trans = get_html_translation_table(HTML_ENTITIES,ENT_QUOTES);

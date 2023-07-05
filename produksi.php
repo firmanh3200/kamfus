@@ -1,14 +1,14 @@
 <?php
 include 'db_connect.php';
 ?>
-<html class="fixed">
+<html lang="id">
 
 <head>
 
 	<!-- Basic -->
 	<meta charset="UTF-8">
 
-	<title>KamFuS</title>
+	<title>KamFuS - Kamus Fungsional Statistisi</title>
 	<meta name="keywords" content="HTML5 Admin Template" />
 	<meta name="description" content="CKP Target">
 	<meta name="author" content="KamFuS">
@@ -23,35 +23,53 @@ include 'db_connect.php';
     <!-- CSS Files -->
     <link href="./assets/css/blk-design-system.css" rel="stylesheet" />
     <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      position: sticky;
+      top: 0;
+      background-color: black;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 25px;
+      flex-wrap: wrap;
+      max-width: 90%;
+      font-size: 13px;
+      margin: 0 auto;
+    }
+
     table.dataTable th, td {
     font-size: 10pt;
+	valign: top;
     }
     </style>
 </head>
 
-<body class="profile-page">
+<body class="index-page">
 	<section class="body">
 
 		<!-- start: header -->
-		<header class="header">
-			<div class="logo-container">
-				<section class="panel">
-					<div class="panel-body">
-						<a href="kalkulator2.php" class="btn btn-success">Kalkulator</a>
-						<a href="https://webapps.bps.go.id/kipapp" class="btn btn-warning" target="_BLank">KipApp</a>
-						<a href="https://smartkit.32net.id" class="btn btn-primary" target="_BLank">SmartKit</a>
-						<a href="sosial.php" class="btn btn-default" target="_BLank">Sosial</a>
-						<a href="produksi.php" class="btn btn-default" target="_BLank">Produksi</a>
-						<a href="distribusi.php" class="btn btn-default" target="_BLank">Distribusi</a>
-						<a href="nerwilis.php" class="btn btn-default" target="_BLank">Nerwilis</a>
-						<a href="ipds.php" class="btn btn-default" target="_BLank">IPDS</a>
-					</div>
-				</section>
-			</div>
-		</header>
+		<div class="header">
+                <a href="index.php" class="btn btn-sm btn-success style="align: center">Home</a>
+                <a href="https://webapps.bps.go.id/kipapp" class="btn btn-sm btn-warning" target="_BLank">KipApp</a>
+                <a href="https://smartkit.32net.id" class="btn btn-sm btn-info" target="_BLank">SmartKit</a>
+		</div>
 		<!-- end: header -->
 
-		<section role="main" class="content-body">
+		<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-lg-12 col-xl-12">
 						<section class="panel">
@@ -72,7 +90,7 @@ include 'db_connect.php';
 									<tbody>
                     					<?php
 										$qry = $conn->query("SELECT * FROM kamus WHERE kode_pjk='5' 
-										order by kegiatan AND kode_perka asc");
+										order by pelaksana asc");
                     					while($row= $qry->fetch_assoc()):
                     						$trans = get_html_translation_table(HTML_ENTITIES,ENT_QUOTES);
                     					$number=$row['ak'];
@@ -89,9 +107,7 @@ include 'db_connect.php';
                     						<td><?php echo ucwords($row['uraian']) . ' pada Kegiatan (' . $row['kegiatan'] . ')'; ?></td>
 											<td class="text-center"><?php echo $row['satuan'] ?></td>
                     						<td class="text-center"><b><?php echo $formatted_number ?></b></td>
-											<td class="text-center">
-												<a class='btn btn-success btn-sm' data-toggle='modal' href='#lihat<?php echo $row['id'] ?> '>Detil</a>
-											</td>
+											<td><?php echo ucwords($row['keterangan']) ?></td>
                     					</tr>	
                     				<?php include('lihat_kamus.php')  ?>
 									<?php endwhile; ?>
@@ -101,18 +117,14 @@ include 'db_connect.php';
 						</section>
 					</div>
 				</div>
-		</section>
+		</div>
 	</section>
-	<footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h1 class="title">KamFuS</h1>
-          	<h5 class="title">BPS Provinsi Jawa Barat</h5>
-          </div>
+	<div class="footer">
+        <div class="container">
+            <h2 class="title">KamFuS</h2>
+            <h3 class="title">BPS Provinsi Jawa Barat</h3>
         </div>
-      </div>
-    </footer>
+    </div>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
@@ -128,6 +140,7 @@ include 'db_connect.php';
 					'copy', 'csv', 'excel', 'pdf', 'print'
 				],
 				paging: true,
+				pageLength: 3,
 				responsive: true,
 				
 			});
