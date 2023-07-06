@@ -259,28 +259,58 @@ include 'db_connect.php';
 
             <div class="section">
                 <div class="container">
-                    <h3 class="title mb-5">Butir Kegiatan</h3>
+                    <h3 class="title mb-5">Butir Kegiatan 2013</h3>
                     <div class="row">
-                        <div class="col-md-2">
-                            <a class="btn btn-sm btn-info" href="kalkulator2.php">Kalkulator</a>
+                        <div class="col-md-12">
+                            <a class="btn btn-sm btn-primary" href="kalkulator2.php">Hitung Angka Kredit Anda</a>
                         </div>
-                        <div class="col-md-2">
+                    </div>
+                    <hr>
+                    <h4>Berdasarkan Penanggung Jawab Kegiatan</h4>
+                    <div class="row">
+                        <div class="col-md-4">
                             <a class="btn btn-sm btn-info" href="sosial.php">Statistik Sosial</a>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <a class="btn btn-sm btn-info" href="produksi.php">Statistik Produksi</a>
                         </div>
-                        <div class="col-md-2">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="distribusi.php">Statistik Distribusi</a>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="nerwilis.php">Nerwilis</a>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="ipds.php">I P D S</a>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="umum.php">Umum</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Berdasarkan Jabatan</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat1.php">Statistisi Pelaksana</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat2.php">Statistik Pelaksana Lanjutan</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat3.php">Statistik Penyelia</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat4.php">Statistik Pertama</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat5.php">Statistisi Muda</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-sm btn-warning" href="stat6.php">Statistisi Madya</a>
                         </div>
                     </div>
                 </div>

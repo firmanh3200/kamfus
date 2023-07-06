@@ -8,7 +8,7 @@ include 'db_connect.php';
 	<!-- Basic -->
 	<meta charset="UTF-8">
 
-	<title>KamFuS</title>
+	<title>KamFuS - Kamus Fungsional Statistisi</title>
 	<meta name="keywords" content="HTML5 Admin Template" />
 	<meta name="description" content="CKP Target">
 	<meta name="author" content="KamFuS">
@@ -82,7 +82,6 @@ include 'db_connect.php';
                     						<th class="text-center">Kode Perka</th>
                     						<th class="text-center">Statistisi</th>
 											<th class="text-center">Pekerjaan Anda</th>
-                    						<th class="text-center">Satuan Hasil</th>
                     						<th class="text-center">Angka Kredit</th>
                     						<th class="text-center">Penjelasan</th>
                     					</tr>
@@ -104,9 +103,8 @@ include 'db_connect.php';
                     					<tr>
                     						<td class="text-center"><?php echo ucwords($row['kode_perka']) ?></td>
                     						<td><?php echo ucwords($row['pelaksana']) ?></td>
-                    						<td><?php echo ucwords($row['uraian']) . ' pada Kegiatan (' . $row['kegiatan'] . ')'; ?></td>
-											<td class="text-center"><?php echo $row['satuan'] ?></td>
-                    						<td class="text-center"><b><?php echo $formatted_number ?></b></td>
+                    						<td><?php echo ucwords($row['uraian']) . ' pada Kegiatan (' . $row['kegiatan'] . ') dengan satuan hasilnya: (' . $row['satuan'] . ')'; ?></td>
+											<td class="text-center"><b><?php echo $formatted_number ?></b></td>
 											<td><?php echo ucwords($row['keterangan']) ?></td>
                     					</tr>	
                     				<?php include('lihat_kamus.php')  ?>
