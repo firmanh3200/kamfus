@@ -259,7 +259,7 @@ include 'db_connect.php';
 
             <div class="section">
                 <div class="container">
-                    <h3 class="title mb-5">Butir Kegiatan 2013</h3>
+                    <h3 class="title mb-5">Butir Kegiatan PerMenPAN 2013</h3>
                     <div class="row">
                         <div class="col-md-12">
                             <a class="btn btn-sm btn-primary" href="kalkulator2.php">Hitung Angka Kredit Anda</a>
@@ -507,9 +507,7 @@ include 'db_connect.php';
                         <h4 class="title title-up">Rencana Hasil Kerja</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="flourish-embed flourish-table" data-src="visualisation/14034204">
-                            <script src="https://public.flourish.studio/resources/embed.js"></script>
-                        </div>
+                        <div class="flourish-embed flourish-table" data-src="visualisation/14358422"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
@@ -553,8 +551,8 @@ include 'db_connect.php';
                         <h4 class="title title-up">Indikator Kinerja Utama</h4>
                     </div>
                     <div class="modal-body">
-                        
-                    </div>
+                    	<div class="flourish-embed flourish-table" data-src="visualisation/14152017"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+					</div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                     </div>
@@ -572,7 +570,7 @@ include 'db_connect.php';
                         <h4 class="title title-up">Rencana Aksi</h4>
                     </div>
                     <div class="modal-body">
-                        
+                        <div class="flourish-embed flourish-table" data-src="visualisation/14358963"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
