@@ -17,7 +17,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 150px;
+      padding-top: 200px;
     }
     
     .popup-content {
@@ -25,10 +25,11 @@
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
+      padding-top: 50px
     }
     
     .popup-body {
-      margin-top: 325px;
+      margin-top: 350px;
       margin-bottom: 10px;
       max-width: 90%;
     }

@@ -265,7 +265,7 @@ include 'db_connect.php';
                             <a class="btn btn-sm btn-primary" href="kalkulator2.php">Hitung Angka Kredit Anda</a>
                         </div>
                     </div>
-                    <hr>
+                    <hr><hr><hr>
                     <h4>Berdasarkan Penanggung Jawab Kegiatan</h4>
                     <div class="row">
                         <div class="col-md-4">
@@ -274,11 +274,11 @@ include 'db_connect.php';
                         <div class="col-md-4">
                             <a class="btn btn-sm btn-info" href="produksi.php">Statistik Produksi</a>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="distribusi.php">Statistik Distribusi</a>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-3">
                             <a class="btn btn-sm btn-info" href="nerwilis.php">Nerwilis</a>
                         </div>
@@ -289,22 +289,22 @@ include 'db_connect.php';
                             <a class="btn btn-sm btn-info" href="umum.php">Umum</a>
                         </div>
                     </div>
-                    <hr>
+                    <hr><hr>
                     <h4>Berdasarkan Jabatan</h4>
                     <div class="row">
                         <div class="col-md-4">
                             <a class="btn btn-sm btn-warning" href="stat1.php">Statistisi Pelaksana</a>
                         </div>
                         <div class="col-md-4">
-                            <a class="btn btn-sm btn-warning" href="stat2.php">Statistik Pelaksana Lanjutan</a>
+                            <a class="btn btn-sm btn-warning" href="stat2.php">Statistisi Pelaksana Lanjutan</a>
                         </div>
                         <div class="col-md-4">
-                            <a class="btn btn-sm btn-warning" href="stat3.php">Statistik Penyelia</a>
+                            <a class="btn btn-sm btn-warning" href="stat3.php">Statistisi Penyelia</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <a class="btn btn-sm btn-warning" href="stat4.php">Statistik Pertama</a>
+                            <a class="btn btn-sm btn-warning" href="stat4.php">Statistisi Pertama</a>
                         </div>
                         <div class="col-md-4">
                             <a class="btn btn-sm btn-warning" href="stat5.php">Statistisi Muda</a>
@@ -312,6 +312,23 @@ include 'db_connect.php';
                         <div class="col-md-4">
                             <a class="btn btn-sm btn-warning" href="stat6.php">Statistisi Madya</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <h3 class="title mb-5">Butir Kegiatan PerMenPAN-RB 2022</h3>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <a class="btn btn-xl-6 btn-info" href="master_dasar.php">Master Kegiatan Statistik Dasar</a>
+                        </div>
+                        <div class="col-xl-6">
+                            <a class="btn btn-xl-6 btn-info" href="master_akbaru.php">Master Angka Kredit Baru</a>
+                        </div>
+                    <!--    <div class="col-md-3">
+                            <a class="btn btn-sm btn-success" href="entri_kamus_baru.php">Entri Pekerjaan Anda</a>
+                        </div> -->
                     </div>
                 </div>
             </div>
