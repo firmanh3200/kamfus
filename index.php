@@ -316,6 +316,202 @@ include 'db_connect.php';
                 </div>
             </div>
 
+            <div class="section">
+                <div class="container">
+                    <h3 class="title mb-5">Butir Kegiatan PerMenPAN-RB 2022</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a class="btn btn-md-3 btn-info" href="master_dasar.php">Aktivitas BPS</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-md-3 btn-info" href="kegiatan32.php">Kegiatan BPS Jabar</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-md-3 btn-info" href="master_akbaru.php">Master Angka Kredit Baru</a>
+                        </div>
+						<div class="col-md-3">
+                            <a class="btn btn-md-3 btn-info" href="laporanjft.php">Laporan Kinerja</a>
+                        </div> 
+                    </div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="container">
+					<h3>Jumlah Angka Kredit Kumulatif untuk Pengangkatan dan Kenaikan Jabatan/Pangkat</h3>
+					<div class="row md-6">
+						<table class="table tbl-bordered-md-6 btn-default ">
+							<thead>
+								<tr>
+									<td class="text-center" colspan="1" rowspan="2">Unsur Kegiatan/Jenjang</td>
+								</tr>
+								<tr>
+									<td class="text-center" colspan="2" rowspan="1">Terampil</td>
+									<td class="text-center" colspan="2" rowspan="1">Mahir</td>
+									<td class="text-center" colspan="2" rowspan="1">Penyelia</td>
+								</tr>
+								<tr>
+									<td>Golongan</td>
+									<td class="text-center" rowspan="1">II/c</td>
+									<td class="text-center" rowspan="1">II/d</td>
+									<td class="text-center" rowspan="1">III/a</td>
+									<td class="text-center" rowspan="1">III/b</td>
+									<td class="text-center" rowspan="1">III/c</td>
+									<td class="text-center" rowspan="1">III/d</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"><p>Kegiatan Statistik yang meliputi kegiatan<br>
+										penyediaan Data dan informasi Statistik,<br>
+										dan penguatan Sistem Statistik Nasional</p></td>
+									
+									<td class="text-center">20</td>
+									<td class="text-center">20</td>
+									<td class="text-center">50</td>
+									<td class="text-center">50</td>
+									<td class="text-center">100</td>
+									<td class="text-center">100</td>
+								</tr>
+							</tbody>
+						</table>
+                    </div><br>
+                    <div class="row md-6">
+						
+						<table class="table tbl-bordered-md-6 btn-default ">
+							<thead>
+								<tr>
+									<td class="text-center" colspan="1" rowspan="2">Unsur Kegiatan/Jenjang</td>
+								</tr>
+								<tr>
+									<td class="text-center" colspan="2" rowspan="1">Pertama</td>
+									<td class="text-center" colspan="2" rowspan="1">Muda</td>
+									<td class="text-center" colspan="3" rowspan="1">Madya</td>
+									<td class="text-center" colspan="2" rowspan="1">Utama</td>
+								</tr>
+								<tr>
+									<td>Pendidikan S1 atau DIV</td>
+									<td class="text-center" rowspan="1">III/a</td>
+									<td class="text-center" rowspan="1">III/b</td>
+									<td class="text-center" rowspan="1">III/c</td>
+									<td class="text-center" rowspan="1">III/d</td>
+									<td class="text-center" rowspan="1">IV/a</td>
+									<td class="text-center" rowspan="1">IV/b</td>
+									<td class="text-center" rowspan="1">IV/c</td>
+									<td class="text-center" rowspan="1">IV/d</td>
+									<td class="text-center" rowspan="1">IV/e</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"><p>Penyediaan data dan
+														informasi statistik, <br>penjaminan
+														kualitas dan pengembangan
+														statistik, <br>serta penguatan sistem
+														statistik nasional</p></td>
+									
+									<td class="text-center">50</td>
+									<td class="text-center">50</td>
+									<td class="text-center">100</td>
+									<td class="text-center">100</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">200</td>
+									<td class="text-center">200</td>
+								</tr>
+							</tbody>
+						</table>
+                    </div><br>
+                    <div class="row md-6">
+						
+						<table class="table tbl-bordered-md-6 btn-default ">
+							<thead>
+								<tr>
+									<td class="text-center" colspan="1" rowspan="2">Unsur Kegiatan/Jenjang</td>
+								</tr>
+								<tr>
+									<td class="text-center" colspan="1" rowspan="1">Pertama</td>
+									<td class="text-center" colspan="2" rowspan="1">Muda</td>
+									<td class="text-center" colspan="3" rowspan="1">Madya</td>
+									<td class="text-center" colspan="2" rowspan="1">Utama</td>
+								</tr>
+								<tr>
+									<td>Pendidikan Magister</td>
+									<td class="text-center" rowspan="1">III/b</td>
+									<td class="text-center" rowspan="1">III/c</td>
+									<td class="text-center" rowspan="1">III/d</td>
+									<td class="text-center" rowspan="1">IV/a</td>
+									<td class="text-center" rowspan="1">IV/b</td>
+									<td class="text-center" rowspan="1">IV/c</td>
+									<td class="text-center" rowspan="1">IV/d</td>
+									<td class="text-center" rowspan="1">IV/e</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"><p>Penyediaan data dan
+														informasi statistik, <br>penjaminan
+														kualitas dan pengembangan
+														statistik, <br>serta penguatan sistem
+														statistik nasional</p></td>
+									
+									<td class="text-center">50</td>
+									<td class="text-center">100</td>
+									<td class="text-center">100</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">200</td>
+									<td class="text-center">200</td>
+								</tr>
+							</tbody>
+						</table>
+                    </div><br>
+                    <div class="row md-6">
+							
+						<table class="table tbl-bordered-md-6 btn-default ">
+							<thead>
+								<tr>
+									<td class="text-center" colspan="1" rowspan="2">Unsur Kegiatan/Jenjang</td>
+								</tr>
+								<tr>
+									<td class="text-center" colspan="2" rowspan="1">Muda</td>
+									<td class="text-center" colspan="3" rowspan="1">Madya</td>
+									<td class="text-center" colspan="2" rowspan="1">Utama</td>
+								</tr>
+								<tr>
+									<td>Pendidikan Doktor</td>
+									<td class="text-center" rowspan="1">III/c</td>
+									<td class="text-center" rowspan="1">III/d</td>
+									<td class="text-center" rowspan="1">IV/a</td>
+									<td class="text-center" rowspan="1">IV/b</td>
+									<td class="text-center" rowspan="1">IV/c</td>
+									<td class="text-center" rowspan="1">IV/d</td>
+									<td class="text-center" rowspan="1">IV/e</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"><p>Penyediaan data dan
+														informasi statistik, <br>penjaminan
+														kualitas dan pengembangan
+														statistik, <br>serta penguatan sistem
+														statistik nasional</p></td>
+									
+									<td class="text-center">100</td>
+									<td class="text-center">100</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">150</td>
+									<td class="text-center">200</td>
+									<td class="text-center">200</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                </div>
+            </div>
+
             <div class="section section-tabs">
                 <div class="container">
                     <div class="title">

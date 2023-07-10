@@ -67,15 +67,15 @@ include 'db_connect.php';
                 <a href="index.php" class="btn btn-sm btn-success style="align: center">Home</a>
                 <a href="https://webapps.bps.go.id/kipapp" class="btn btn-sm btn-warning" target="_BLank">KipApp</a>
                 <a href="https://smartkit.32net.id" class="btn btn-sm btn-info" target="_BLank">SmartKit</a>
-		</div>
+		</div><br><br>
 		<!-- end: header -->
-<br><br>
+
 		<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-lg-12 col-xl-12">
 						<section class="panel">
 							<div class="panel-body">
-							<h3><strong><center>Kegiatan Statistik BPS Jawa Barat</center></strong></h3>
+								<h3><strong><center>Kegiatan Statistik BPS Jawa Barat</center></strong></h3>
 								<hr>
 								<table class="table table-bordered table-striped mb-none" id="sosial" data-swf-path="https://cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf">
 									<thead>
@@ -109,13 +109,13 @@ include 'db_connect.php';
 		</div>
 	</section>
 	<br><br><hr>
-	<div class="footer btn-primary">
+	<div class="footer bg-primary">
         <div class="container">
             <h2 class="title">KamFuS</h2>
             <h3 class="title">BPS Provinsi Jawa Barat</h3>
         </div>
     </div>
-	
+	<br><br>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
@@ -137,6 +137,6 @@ include 'db_connect.php';
 			});
 		});
 	</script>
-	</body>
+</body>
 
 </html>
