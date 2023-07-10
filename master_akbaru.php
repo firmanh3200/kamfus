@@ -110,6 +110,7 @@ include 'db_connect.php';
 													<td><?php echo ucwords($row['output']) ?></td>
 													<td class="text-right"><?php echo ucwords($row['ak']) ?></td>
 													<td class="text-center"><input type="checkbox" class="selector-checkbox" value="<?php echo $row['kode_ak']; ?>"></td>
+													<input type="hidden" class="form-control" name="kode_ak[]" value="<?php echo $row['kode_ak']; ?>">
 												</tr>
 												<?php
 											}

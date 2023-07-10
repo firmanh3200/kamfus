@@ -6,7 +6,7 @@ include('db_connect.php');
 		$volume = $_POST['volume'];
 		$bulan = $_POST['bulan'];
 		$nipbaru = $_POST['nipbaru'];
-		$kode_ak = $_POST['kode_ak'];
+		$kode_ak = implode(", ", $_POST['kode_ak']);
 		$tautan = $_POST['tautan'];
 		
         $sql = "INSERT INTO tbl_laporanbaru (kode_kegiatan, volume, bulan, nipbaru, kode_ak, tautan) 
