@@ -1,5 +1,9 @@
 <?php
 include 'db_connect.php';
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>
 <html lang="id">
 
@@ -108,9 +112,11 @@ include 'db_connect.php';
 													<td class="text-center"><?php echo ucwords($row['kode_ak']) ?></td>
 													<td><?php echo ucwords($row['uraian_kegiatan']) ?></td>
 													<td><?php echo ucwords($row['output']) ?></td>
-													<td class="text-right"><?php echo ucwords($row['ak']) ?></td>
-													<td class="text-center"><input type="checkbox" class="selector-checkbox" value="<?php echo $row['kode_ak']; ?>"></td>
-													<input type="hidden" class="form-control" name="kode_ak[]" value="<?php echo $row['kode_ak']; ?>">
+													<td class="text-center"><?php echo $row['ak'] ?></td>
+													<td class="text-right">
+														<input type="checkbox" class="selector-checkbox" value="<?php echo $row['kode_ak']; ?>">
+														<input type="hidden" class="form-control" name="kode_ak[]" value="<?php echo $row['kode_ak']; ?>">
+													</td>
 												</tr>
 												<?php
 											}
@@ -121,7 +127,7 @@ include 'db_connect.php';
 								<br><br><hr>
 								<!-- Tabel kedua (yang akan diisi dengan baris yang dipindahkan) -->
 								<h3>Pekerjaan Anda</h3>
-								<form id="formLaporan" action="proses_simpan_akbaru.php" method="post">
+								<form id="formLaporan" action="simpan_akbaru.php" method="post">
 									<table class="table" id="tabel-2">
 										<thead>
 											<tr>
@@ -141,7 +147,7 @@ include 'db_connect.php';
 										<div class="col-md-3">
 											<label for="kode_kegiatan">Pada Kegiatan:</label>
 											<select name="kode_kegiatan" id="kode_kegiatan">
-												<option value=""></option>
+												<option value="kode_kegiatan"></option>
 												<?php
 													$queryKegiatan = "SELECT * FROM tbl_kegiatan32 ORDER BY nama_kegiatan ASC";
 													$resultKegiatan = mysqli_query($conn, $queryKegiatan);
@@ -162,11 +168,11 @@ include 'db_connect.php';
 											<input type="text" id="volume" name="volume" required>
 										</div>
 										<div class="col-md-4">
-											<label for="bulan">Bulan Pelaksanaan:</label>
+											<label for="bulan">Pada Bulan:</label>
 											<input type="date" id="bulan" name="bulan" required>
 										</div>
 										<div class="col-md-4">
-											<label for="nipbaru">Isikan NIP Baru Anda:</label>
+											<label for="nipbaru">NIP Baru Anda:</label>
 											<input type="text" id="nipbaru" name="nipbaru" required>
 										</div>
 									</div><br>
@@ -237,26 +243,34 @@ include 'db_connect.php';
 	</script>
 	<script>
 		$(document).ready(function() {
-			$("#formLaporan").submit(function(e) {
-				e.preventDefault(); // Menghentikan pengiriman form secara default
-				var formData = $(this).serialize(); // Mengambil data form
+		$("#formLaporan").submit(function(e) {
+			e.preventDefault(); // Menghentikan pengiriman form secara default
+			var formData = $(this).serialize(); // Mengambil data form
 
-				// Kirim data ke server menggunakan AJAX
-				$.ajax({
-					url: $(this).attr("action"),
-					type: $(this).attr("method"),
-					data: formData,
-					success: function(response) {
-						// Tindakan setelah berhasil menyimpan laporan
-						alert("Laporan Anda berhasil disimpan!");
-						// Reset form atau lakukan tindakan lainnya
-					},
-					error: function() {
-						// Tindakan jika terjadi kesalahan dalam menyimpan laporan
-						alert("Terjadi kesalahan dalam menyimpan laporan. Silakan coba lagi!");
-					}
-				});
+			// Ambil nilai dari checkbox yang dicentang
+			var selectedCheckboxes = [];
+			$(".selector-checkbox:checked").each(function() {
+			selectedCheckboxes.push($(this).val());
 			});
+
+			// Tambahkan nilai checkbox yang dicentang ke dalam formData
+			formData += "&kode_ak=" + selectedCheckboxes.join(",");
+
+			// Kirim data ke server menggunakan AJAX
+			$.ajax({
+			url: $(this).attr("action"),
+			type: $(this).attr("method"),
+			data: formData,
+			success: function(response) {
+				// Tindakan setelah berhasil menyimpan laporan
+				alert("Laporan Anda berhasil disimpan!");
+			},
+			error: function() {
+				// Tindakan jika terjadi kesalahan dalam menyimpan laporan
+				alert("Terjadi kesalahan dalam menyimpan laporan. Silakan coba lagi!");
+			}
+			});
+		});
 		});
 	</script>
 </body>
