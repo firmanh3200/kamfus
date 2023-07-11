@@ -26,9 +26,9 @@ if (isset($_POST['SimpanLaporanBaru'])) {
     $query = "INSERT INTO tbl_laporanbaru (kode_kegiatan, volume, bulan, nipbaru, kode_ak, tautan, angka_kredit) VALUES ('$kode_kegiatan', '$volume', '$bulan', '$nipbaru', '" . implode(',', $kode_ak) . "', '$tautan', '$angka_kredit')";
 
     if (mysqli_query($conn, $query)) {
-        echo "Laporan Anda berhasil disimpan";
+        echo "success";
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+        echo "failed";
     }
 }
 ?>

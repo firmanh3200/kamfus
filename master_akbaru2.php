@@ -266,7 +266,31 @@ if (!$conn) {
             checkbox.addEventListener('change', calculateAngkaKredit);
         });
     </script>
-    
+    <script>
+        $(document).ready(function () {
+            $("#formLaporan").submit(function (e) {
+                e.preventDefault(); // Menghentikan pengiriman form secara default
+                var formData = $(this).serialize(); // Mengambil data form
+
+                $.ajax({
+                    url: $(this).attr("action"),
+                    type: $(this).attr("method"),
+                    data: formData,
+                    success: function (response) {
+                        if (response === "success") {
+                            alert("Laporan Anda berhasil disimpan!");
+                        } else {
+                            alert("Terjadi kesalahan dalam menyimpan laporan. Silakan periksa kembali!");
+                        }
+                    },
+                    error: function () {
+                        alert("Terjadi kesalahan dalam menyimpan laporan. Silakan periksa dan coba lagi!");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
