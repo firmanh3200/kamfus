@@ -82,7 +82,7 @@
   </style>
 </head>
 <body>
-  <div class="popup">
+  <div class="popup" id="detail">
     <div class="popup-content">
       <button type="button" class="close close-btn" aria-label="Close" onclick="closePopup()">
         <span aria-hidden="true">&times;</span>
@@ -111,21 +111,45 @@
               } else {
                 $formatted_number = number_format($Stat, 0); // Display without decimal places if 1 or more
               }
-              echo "<h5><strong>Kegiatan/ Proyek: " . $row['kegiatan'] . "</strong></h5>";
-              echo "<p><strong>Pekerjaan Anda:<br></strong> " . $row['uraian'] . "</p>";
-              echo "<p><strong>Satuan hasil:</strong> " . $row['satuan'] . "</p>";
-              echo "<p><strong>Jabatan: Statistisi " . $row['pelaksana'] . "</strong></p>";
-              echo "<p><strong>Angka Kredit: <span id='ak-value'>" . $formatted_number . "</span></strong></p>";
-              echo "<p><strong>Bukti:<br></strong> " . $row['bukti'] . "</p>";
-              echo "<p><strong>Penjelasan:<br></strong> " . $row['keterangan'] . "</p>";
-
-              echo "<form>";
+              echo "<form id='formLaporan' name='laporanjftlama' action='simpan_aklama.php' method='post'>";
+              echo "<h5>Kegiatan/ Proyek:<strong> " . $row['kegiatan'] . "</strong></h5>";
               echo "<div class='form-group'>";
+              echo "<p>Kode PerKa: <strong>" . $row['kode_perka'] . "</strong></p>";
+              echo "<p>Uraian Pekerjaan: <strong>" . $row['uraian'] . "</strong></p>";
+              echo "<p>Satuan hasil:<strong> " . $row['satuan'] . "</strong></p>";
+              echo "<p>Jabatan: <strong>Statistisi " . $row['pelaksana'] . "</strong></p>";
+              echo "<p>Angka Kredit: <strong><span id='ak-value'>" . $formatted_number . "</span></strong></p>";
+              echo "<input type='hidden' class='form-control' name='ak' value='" . $row['ak'] . "'>";
+              echo "<input type='hidden' class='form-control' name='id_butirlama' value='" . $row['id'] . "'>";
+              echo "<p>Bukti: <strong>" . $row['bukti'] . "</strong></p>";
+              echo "<p>Penjelasan: <strong>" . $row['keterangan'] . "</strong></p>";
+
+              echo "<div class='row'>";
+              echo "<div class='col-md-3'>";
               echo "<label for='volume'>Volume:</label>";
-              echo "<input type='text' id='volume' name='volume' class='form-control' placeholder='Masukkan volume'>";
+              echo "<input type='text' id='volume' name='volume' class='form-control' placeholder='volume output' required>";
               echo "</div>";
-              echo "<button type='button' class='btn btn-primary' onclick='calculateAK()'>Hitung</button>";
-              echo "<div id='result' class='result'></div>";
+              echo "<div class='col-md-3'>";
+              echo "<label for='bulan'>di Bulan:</label>";
+              echo "<input type='date' id='bulan' name='bulan' class='form-control' placeholder='Bulan pelaksanaan pekerjaan' required>";
+              echo "</div>";
+              echo "<div class='col-md-6'>";
+              echo "<label for='nipbaru'>NIP Baru Anda (18 dijit):</label>";
+              echo "<input type='text' id='nipbaru' name='nipbaru' class='form-control' placeholder='Isikan NIP Baru' required>";
+              echo "</div>";
+              echo "</div>";
+              echo "<div class='row'>";
+              echo "<div class='col-md-3'>";
+              echo "<label for='tautan'>Tautan Bukti Dukung:</label>";
+              echo "</div>";
+              echo "<div class='col-md-9'>";
+              echo "<input type='text' id='tautan' name='tautan' class='form-control' placeholder='Link bukti pekerjaan'>";
+              echo "</div>";
+              echo "<div id='result' class='result col-mb-12 bg-warning'></div>";
+              echo "<div class='col-md-12'>";
+              echo "<button type='submit' name='SimpanLaporanLama' class='btn btn-success' onclick='action'>Simpan Laporan</button>";
+              echo "</div>";
+              echo "</div>";
               echo "</form>";
             }
           } else {
@@ -139,6 +163,7 @@
         $conn->close();
         ?>
       </div>
+
       <div class="text-right">
         <button type="button" class="btn btn-secondary" onclick="closePopup()">Tutup</button>
       </div>
@@ -151,19 +176,7 @@
     function closePopup() {
       window.history.back();
     }
-
-    // Fungsi untuk menghitung Angka Kredit
-    function calculateAK() {
-      var volume = document.getElementById('volume').value;
-      var ak = parseFloat(document.getElementById('ak-value').textContent);
-
-      if (volume !== '') {
-        var result = ak * volume;
-        document.getElementById('result').innerHTML = "Angka Kredit Anda: " + result.toFixed(2);
-      } else {
-        document.getElementById('result').innerText = '';
-      }
-    }
   </script>
+
 </body>
 </html>

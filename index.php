@@ -143,6 +143,9 @@ include 'db_connect.php';
                             <a href="#" class="dropdown-item" target="_blank">
                                 <i class="tim-icons icon-single-02"></i>Login Tim Penilai
                             </a>
+                            <a href="#" class="dropdown-item" target="_blank">
+                                <i class="tim-icons icon-single-02"></i>Login Statistisi
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -261,8 +264,11 @@ include 'db_connect.php';
                 <div class="container">
                     <h3 class="title mb-5">Butir Kegiatan PerMenPAN 2013</h3>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <a class="btn btn-sm btn-primary" href="kalkulator2.php">Hitung Angka Kredit Anda</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-sm btn-primary" href="laporanjftlama.php">Laporan Kinerja</a>
                         </div>
                     </div>
                     <hr><hr><hr>
@@ -330,7 +336,7 @@ include 'db_connect.php';
                             <a class="btn btn-md-3 btn-info" href="master_akbaru.php">Master Angka Kredit Baru</a>
                         </div>
 						<div class="col-md-3">
-                            <a class="btn btn-md-3 btn-info" href="laporanjft.php">Laporan Kinerja</a>
+                            <a class="btn btn-md-3 btn-info" href="laporanjftbaru.php">Laporan Kinerja</a>
                         </div> 
                     </div>
 				</div>

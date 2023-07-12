@@ -26,9 +26,9 @@ if (isset($_POST['SimpanLaporanBaru'])) {
     $query = "INSERT INTO tbl_laporanbaru (kode_kegiatan, volume, bulan, nipbaru, kode_ak, tautan, angka_kredit) VALUES ('$kode_kegiatan', '$volume', '$bulan', '$nipbaru', '" . implode(',', $kode_ak) . "', '$tautan', '$angka_kredit')";
 
     if (mysqli_query($conn, $query)) {
-        echo "success";
+        echo "<script>alert('Laporan Anda Berhasil Disimpan'); window.location.href = '{$_SERVER['HTTP_REFERER']}';</script>";
     } else {
-        echo "failed";
+        echo "Laporan Anda Gagal tersimpan, cek kembali isian atau lapor developer";
     }
 }
 ?>
